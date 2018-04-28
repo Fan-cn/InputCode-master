@@ -18,6 +18,8 @@ import android.view.Gravity;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.InputMethodManager;
+import android.widget.EditText;
 import android.widget.LinearLayout;
 
 /**
@@ -337,8 +339,9 @@ public class InputCode extends ViewGroup {
         AppCompatEditText editText;
         for (int i = 0; i < count; i++) {
             editText = (AppCompatEditText) getChildAt(i);
-            editText.setEnabled(false);
+            if (i < count - 1) editText.setEnabled(false);
             if (editText.getText().length() == 0){
+                showSoftInput(editText);
                 editText.requestFocus();//改变焦点
                 setBg(editText, true);//修改背景
                 editText.setEnabled(true);
@@ -360,6 +363,7 @@ public class InputCode extends ViewGroup {
                         setBg(editText, false);//修改背景
                         editText.setEnabled(false);
                     }if (editText.getText().length() == 1){
+                        showSoftInput(editText);
                         editText.setEnabled(true);
                         editText.requestFocus();//改变焦点
                         editText.setSelection(1);//设置光标
@@ -370,6 +374,20 @@ public class InputCode extends ViewGroup {
             return false;
         }
     };
+
+    /**
+     * 动态显示软键盘
+     *
+     * @param edit    输入框
+     */
+    private void showSoftInput(AppCompatEditText edit) {
+        edit.setFocusable(true);
+        edit.setFocusableInTouchMode(true);
+        edit.requestFocus();
+        InputMethodManager inputManager = (InputMethodManager) getContext()
+                .getSystemService(Context.INPUT_METHOD_SERVICE);
+        inputManager.showSoftInput(edit, 0);
+    }
 
     public interface OnInputCompleteListener{
         void onComplete(String code);
