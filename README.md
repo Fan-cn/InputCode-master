@@ -22,6 +22,24 @@
 	}
 ```
 
+## Features
+
+属性 | 含义
+------------ | -------------
+code_box            |显示输入框的数量
+code_box_width      |每个输入框的宽度
+code_box_height     |每个输入框的高度
+code_box_v_padding  |输入框与上边和下边的间距
+code_box_h_padding  |输入框之间的横向间距
+code_box_bg_focus   |输入框未选中时的背景
+code_box_bg_normal  |输入框选中时的背景
+code_text_color     |输入文字的颜色
+code_text_size      |输入文字的大小
+code_input_type     |输入文字的类型
+code_is_show_back   |是否显示自定义背景(默认显示)
+
+
+
 ## Usage
 
 xml:
@@ -34,6 +52,18 @@ xml:
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        />
+
+<!--设置输入框数量、输入类型、宽度、高度-->
+<com.fan.corelibrary.InputCode
+        android:id="@+id/edit_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        fan:code_box="4"
+        fan:code_input_type="number"
+        fan:code_box_width="50dp"
+        fan:code_box_height="50dp"
         />
 ```
 
