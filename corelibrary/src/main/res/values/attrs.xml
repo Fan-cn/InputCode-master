@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="InputCode">
+        <attr name="code_box" format="integer"/>
+        <attr name="code_box_width" format="dimension"/>
+        <attr name="code_box_height" format="dimension"/>
+        <attr name="code_box_v_padding" format="dimension"/>
+        <attr name="code_box_h_padding" format="dimension"/>
+        <attr name="code_box_bg_focus" format="reference"/>
+        <attr name="code_box_bg_normal" format="reference"/>
+        <attr name="code_text_color" format="color"/>
+        <attr name="code_text_size" format="dimension"/>
+        <attr name="code_input_type" format="string"/>
+        <attr name="code_is_show_back" format="boolean"/>
+    </declare-styleable>
+</resources>
