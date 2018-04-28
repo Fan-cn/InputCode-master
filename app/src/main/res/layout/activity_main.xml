@@ -19,4 +19,14 @@
         fan:code_box_width="50dp"
         fan:code_box_height="50dp"
         />
+
+    <TextView
+        android:id="@+id/text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:layout_marginTop="20dp"
+        android:text="显示输入完成后的数字"
+        />
 </LinearLayout>
