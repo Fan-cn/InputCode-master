@@ -5,7 +5,7 @@
 ## Import
 
 
-**Step 1. 在项目根build.gradle文件中增加JitPack仓库依赖。** 
+**Step 1. 在项目根build.gradle文件中增加jcenter仓库依赖。**
 ```
     allprojects {
 		repositories {
