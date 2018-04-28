@@ -2,8 +2,8 @@ apply plugin: 'com.android.library'
 apply plugin: 'com.jfrog.bintray'
 apply plugin: 'com.github.dcendents.android-maven'
 
-def siteUrl = 'https://github.com/leonHua/LFilePicker'   // 项目的主页
-def gitUrl = 'https://github.com/leonHua/LFilePicker.git'   // Git仓库的url
+def siteUrl = 'https://github.com/Fan-cn/InputCode-master'   // 项目的主页
+def gitUrl = 'https://github.com/Fan-cn/InputCode-master.git'   // Git仓库的url
 Properties properties = new Properties()
 properties.load(project.rootProject.file('local.properties').newDataInputStream())
 
@@ -14,7 +14,7 @@ bintray {
     user = properties.getProperty("bintray.user")
     key = properties.getProperty("bintray.apikey")
     pkg {
-        repo = 'inputcodelibrary'//自己创建的仓库名字
+        repo = 'InputCode'//自己创建的仓库名字
         name = 'inputcode'//上传到JCenter的名字,最终引用的名字
         websiteUrl = siteUrl
         vcsUrl = gitUrl
@@ -52,7 +52,7 @@ install {
                 }
                 developers {
                     developer {
-                        id 'fan'        //填写bintray或者github的用户名
+                        id 'Fan-cn'        //填写bintray或者github的用户名
                         name 'fan'         //姓名
                         email 'blackeyesfan@gmail.com'//邮箱
                     }

@@ -29,3 +29,5 @@ dependencies {
 
     api "com.android.support:appcompat-v7:$project.SUPPOURT_COMPAT_V7"
 }
+
+apply from: 'bintray.gradle'
