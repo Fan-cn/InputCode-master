@@ -14,7 +14,7 @@
 		}
 	}
 ```
-Step 2. Add the dependency (api/implementation)
+**Step 2. Add the dependency (api/implementation)**
 ```
     dependencies {
 	        implementation 'com.fan.corelibrary:1.0.0'
