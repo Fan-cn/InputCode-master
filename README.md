@@ -2,6 +2,10 @@
 
 用于输入验证码,可以设置输入框的个数以及其他特性
 
+
+![](https://github.com/Fan-cn/InputCode-master/blob/master/app/gif/screen.gif)
+
+
 ## Import
 
 
