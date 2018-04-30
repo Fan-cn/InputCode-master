@@ -22,7 +22,7 @@
 **Step 2. Add the dependency (api/implementation)**
 ```
     dependencies {
-	        implementation '审核中...'
+	        implementation 'com.fan:corelibrary:1.0'
 	}
 ```
 
