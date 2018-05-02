@@ -26,5 +26,5 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
     implementation project(':corelibrary')
 //    implementation 'com.fan:corelibrary:1.0'
-//    implementation "com.android.support:appcompat-v7:$project.SUPPOURT_COMPAT_V7"
+//    implementation "com.android.support:appcompat-v7:$project.SUPPORT_COMPAT_V7"
 }

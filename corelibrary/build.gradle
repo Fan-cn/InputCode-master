@@ -27,7 +27,7 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
-    api "com.android.support:appcompat-v7:$project.SUPPOURT_COMPAT_V7"
+    api "com.android.support:appcompat-v7:$project.SUPPORT_COMPAT_V7"
 }
 
 apply from: 'bintray.gradle'
