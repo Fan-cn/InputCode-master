@@ -34,10 +34,10 @@ public class InputCode extends ViewGroup {
     /**
      * InputType
      */
-    public static final String NUMBER = "number";
-    public static final String TEXT = "text";
+    public static final String NUMBER   = "number";
+    public static final String TEXT     = "text";
     public static final String PASSWORD = "password";
-    public static final String PHONE = "phone";
+    public static final String PHONE    = "phone";
     /**
      * 输入框的数量
      */
@@ -160,8 +160,6 @@ public class InputCode extends ViewGroup {
             AppCompatEditText editText = new AppCompatEditText(getContext());
             //对每个EditText添加返回按钮的监听
             editText.setOnKeyListener(onKeyListener);
-            //添加背景
-            setBg(editText, false);
             //设置输入文字的颜色
             editText.setTextColor(mTextColor);
             //设置输入文字的大小
@@ -188,6 +186,7 @@ public class InputCode extends ViewGroup {
                     break;
             }
 
+            //添加背景
             if (i == 0) {
                 setBg(editText, true);
                 editText.setEnabled(true);
