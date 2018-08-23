@@ -219,7 +219,8 @@ public class InputCode extends ViewGroup {
             int measuredWidth = child.getMeasuredWidth();
             int maxH = measuredHeight + mBoxVPadding * 2;
             int maxW = (measuredWidth + mBoxHPadding) * mBoxCount - mBoxHPadding;
-            setMeasuredDimension(resolveSize(maxW, widthMeasureSpec),
+            setMeasuredDimension(
+                    resolveSize(maxW, widthMeasureSpec),
                     resolveSize(maxH, heightMeasureSpec));
         }
     }
@@ -338,14 +339,14 @@ public class InputCode extends ViewGroup {
         AppCompatEditText editText;
         for (int i = 0; i < count; i++) {
             editText = (AppCompatEditText) getChildAt(i);
-            if (i < count - 1) editText.setEnabled(false);
             if (editText.getText().length() == 0){
-                showSoftInput(editText);
-                editText.requestFocus();//改变焦点
-                setBg(editText, true);//修改背景
                 editText.setEnabled(true);
+                showSoftInput(editText);
+//                editText.requestFocus();//改变焦点
+                setBg(editText, true);//修改背景
                 break;
             }
+//            if (i < count - 1) editText.setEnabled(false);
         }
     }
 
@@ -360,11 +361,11 @@ public class InputCode extends ViewGroup {
                     editText = (AppCompatEditText) getChildAt(i);
                     if (editText.getText().length() == 0 && i > 0){
                         setBg(editText, false);//修改背景
-                        editText.setEnabled(false);
+//                        editText.setEnabled(false);
                     }if (editText.getText().length() == 1){
-                        showSoftInput(editText);
                         editText.setEnabled(true);
-                        editText.requestFocus();//改变焦点
+                        showSoftInput(editText);
+//                        editText.requestFocus();//改变焦点
                         editText.setSelection(1);//设置光标
                         break;
                     }
@@ -382,7 +383,7 @@ public class InputCode extends ViewGroup {
     private void showSoftInput(AppCompatEditText edit) {
         edit.setFocusable(true);
         edit.setFocusableInTouchMode(true);
-        edit.requestFocus();
+        edit.requestFocus();//改变焦点
         InputMethodManager inputManager = (InputMethodManager) getContext()
                 .getSystemService(Context.INPUT_METHOD_SERVICE);
         inputManager.showSoftInput(edit, 0);
